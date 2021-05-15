@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: 'Abel', sans-serif;
+  color: #555;
+}
+a {
+  color: #cd2026;
+  text-decoration: none;
+  transition: ease all 0.3s;
+}
+a:hover {
+  text-decoration: underline;
+}
+/* Grid Layout */
+
+.container {
+  width: 100%;
+  padding-right: var(--mh-gutter-x, 0.75rem);
+  padding-left: var(--mh-gutter-x, 0.75rem);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+
+.row {
+  --mh-gutter-x: 1.5rem;
+  --mh-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(var(--mh-gutter-y) * -1);
+  margin-right: calc(var(--mh-gutter-x) / -2);
+  margin-left: calc(var(--mh-gutter-x) / -2);
+}
+
+.row > * {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  padding-right: calc(var(--mh-gutter-x) / 2);
+  padding-left: calc(var(--mh-gutter-x) / 2);
+  margin-top: var(--mh-gutter-y);
+}
+
+.col {
+  flex: 1 0 0%;
+}
+@media (min-width: 992px) {
+  .col-lg-3 {
+    flex: 0 0 auto;
+    width: 25%;
+  }
+}
+@media (max-width: 992px) {
+  .col-lg-3 {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+}
+
+.product {
+  cursor: pointer;
+}
+.product img {
+  width: 100%;
+  display: block;
+  height: auto;
+  cursor: pointer;
+}
+.product:hover .product-body h3 {
+  color: #cd2026;
+}
+.product-body {
+  padding: 20px 0;
+}
+.product-body h5 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #777;
+}
+
+.product-body h3 {
+  padding: 10px 0;
+  transition: ease all 0.3s;
+}
+
+.g-3 {
+  --mh-gutter-x: 1rem;
+  --mh-gutter-y: 1rem;
+}
+
+.categories {
+  padding-bottom: 50px;
+  text-align: center;
+}
+
+.btn {
+  background-color: transparent;
+  border: none;
+  display: inline-block;
+  padding: 10px 20px;
+  font-family: inherit;
+  color: #000;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: ease all 0.3s;
+}
+
+.btn:hover {
+  color: #cd2026;
+}
+.logo {
+  width: 100px;
+  margin: 30px auto;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 100px 0px 30px;
+}
